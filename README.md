@@ -6,7 +6,7 @@
 -> online markdown editor (honestly, taught me how to write readme like this one)
 - https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github
 -> reminded me how to add existing source code to GitHub from command line
-** some problems, which have been solved**
+**some problems, which have been solved**
 - https://stackoverflow.com/questions/26505980/github-permission-denied-ssh-add-agent-has-no-identities 
 -> "Permission denied (publickey)" error suprised me, moreover I have already generated key in my directory; all I needed to do was one command line:
 ```sh
