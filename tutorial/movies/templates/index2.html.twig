@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Movies Page 
+    <!-- Here the 'Movies Page' overwrite the 'Welcome' block from base.html.twig file -->
+{% endblock %}
+
+{% block body %}
+        <!-- And here we can put any key from an array from controller 
+        buuuuuut it must return string, otherwise there will appear an exception
+        ("Warning: Array to string conversion"). -->
+    {% for movie in movies %}
+       <li> {{ movie }} </li> 
+    {% endfor %}
+
+    <!-- Examples of global variables -->
+    {{ _self }}
+    {{ _charset }}
+    <!-- We can easly define new global variables in config/packages/twig.yaml -->
+    {{ author }}
+
+{% endblock %}
