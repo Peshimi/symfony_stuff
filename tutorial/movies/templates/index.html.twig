@@ -1,0 +1,11 @@
+<h1>
+    {{ dump(episode) }}
+    <!-- It's a twig version of < ?php ... -->
+</h1>
+
+{% if title %}
+    <p>{{title}} is a movie</p>
+{% else %}
+    <p>Whoops, no title has been set.</p>
+{% endif %}
+<!-- if we won't close 'if' statement, we will get an error "Unexpected end of template." -->
