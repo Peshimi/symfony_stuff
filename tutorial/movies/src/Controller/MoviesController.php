@@ -11,16 +11,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MoviesController extends AbstractController
 {
-    #[Route('/movies', name: 'app_movies')]
-    public function index(EntityManagerInterface $em): Response
+    private $em;
+    public function __construct(EntityManagerInterface $em)
     {
-        //this array is static, now we will use here the entity
-        //$movies = ["Avengers", "Inception", "Loki", "Black Widow"];
-        //return $this->render('index2.html.twig', array(
-        //    'movies' => $movies
-        //));
-        
-        $repository = $em->getRepository(Movie::class);
+        $this->em = $em;
+    }
+
+    #[Route('/movies', name: 'app_movies')]
+    public function index(): Response
+    {
+        $repository = $this->em->getRepository(Movie::class);
         $movies = $repository->findAll();
         dd($movies);
 
