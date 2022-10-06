@@ -38,10 +38,6 @@ class MoviesController extends AbstractController
         // $movies = $repository->count(['id' => 9]);
         // ^ if we leave empty brackets [] in count method, we will get a result of all counted rows is database
 
-        $repository = $this->em->getRepository(Movie::class);
-        $movies = $repository->getClassName();
-        dd($movies);
-
-        return $this->render('index2.html.twig');
+        return $this->render('index3.html.twig');
     }
 }
